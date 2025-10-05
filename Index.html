@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motheo Pre School - Quality Early Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4a90e2;
+            --secondary: #ff9f43;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var();
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var();
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(74, 144, 226, 0.9)), url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npyWv-ikEKZtExKkMxMBKDcw0m_wOwbGdK__P-p9OxH60A_JP-Y_KsrrrknD_MPpU7BD56FdgLULKYM2qeASI-esSzSvfCY-QdEX6ElDvea4cQe8Ug_3PXY2vbDEokhrCYfXB4D=s680-w680-h510-rw');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #ff8c2a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a7bc8;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+            background-color: #f0f7ff;
+        }
+        
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .location-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .location-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .location-details {
+            margin-bottom: 30px;
+        }
+        
+        .location-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-details i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .location-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .action-btn i {
+            margin-right: 8px;
+        }
+        
+        .action-btn:hover {
+            background-color: var();
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .map {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var();
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var();
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var();
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding: 20px 0;
+                z-index: 99;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .location-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h1>Motheo <span>Pre School</span></h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Quality Early Education in Soshanguve</h2>
+            <p>At Motheo Pre School, we provide a nurturing environment where children can learn, grow, and develop essential skills for their future.</p>
+            <a href="#contact" class="btn">Enroll Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Pre School</h2>
+                <p>Building a strong foundation for your child's future</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Motheo Pre School</h3>
+                    <p>Motheo Pre School is a trusted early childhood education center located in Soshanguve South Extension 1. With a commitment to excellence, we provide a safe, stimulating, and nurturing environment where children can explore, learn, and grow.</p>
+                    <p>Our experienced educators are dedicated to helping each child develop socially, emotionally, physically, and intellectually through a balanced curriculum that includes play-based learning, creative activities, and foundational academic skills.</p>
+                    <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
+                </div>
+                <div class="about-image">
+                    <img src="data:image/jpeg;base64,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" alt="Motheo Pre School Classroom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Visit us in Soshanguve South Extension 1</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Find Us</h3>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Soshanguve South Extension 1, Soshanguve South, Soshanguve, 0152</p>
+                        <p><i class="fas fa-phone"></i> 067 279 4643</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday: 7:00 AM - 4:00 PM</p>
+                        <p><i class="fas fa-clock"></i> Saturday: Closed</p>
+                        <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                    </div>
+                    
+                    <div class="location-actions">
+                        <a href="tel:0672794643" class="action-btn">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" target="_blank" class="action-btn">
+                            <i class="fas fa-directions"></i> Directions
+                        </a>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14374.821245202!2d28.080485349999998!3d-25.5792681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd8944d6d246f%3A0x696e0c5c0a5e0c09!2sSoshanguve%20South%2C%20Soshanguve%2C%200152!5e0!3m2!1sen!2sza!4v1690000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to schedule a visit or learn more about enrollment</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Soshanguve South Extension 1, Soshanguve South, Soshanguve, 0152</p>
+                        <p><i class="fas fa-phone"></i> 067 279 4643</p>
+                        <p><i class="fas fa-envelope"></i> info@motheopreschool.co.za</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Motheo Pre School</h3>
+                    <p>Building a strong foundation for your child's future through quality early education in a nurturing environment.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Soshanguve South Extension 1</li>
+                        <li>Soshanguve South, Soshanguve, 0152</li>
+                        <li>067 279 4643</li>
+                        <li>info@motheopreschool.co.za</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Mon - Fri: 7:00 AM - 4:00 PM</li>
+                        <li>Saturday: Closed</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Motheo Pre School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking a link
+                document.querySelector('nav ul').classList.remove('show');
+            });
+        });
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
